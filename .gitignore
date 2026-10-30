@@ -1,3 +1,5 @@
 /dist/
 /go-nether-raknet
 *.pem
+/.idea/
+.DS_Store
