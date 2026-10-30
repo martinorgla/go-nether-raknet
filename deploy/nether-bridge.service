@@ -1,0 +1,15 @@
+[Unit]
+Description=NetherNet LAN bridge for Geyser (Minecraft Bedrock 26.60+ LAN tab)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/nether-bridge -geyser 127.0.0.1:19132
+WorkingDirectory=/var/lib/nether-bridge
+StateDirectory=nether-bridge
+DynamicUser=yes
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
